@@ -15,9 +15,9 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
+    int i = 0;
 
     for (int largo = 1; largo < (INT_MAX / 2); largo *= 100) {
-        int i = 0;
         auto inicio = chrono::steady_clock::now();
         std::vector<int> arreglo = generarVector(largo);
         //quicksort
