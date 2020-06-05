@@ -1,0 +1,177 @@
+\doxysection{db.\+cpp File Reference}
+\label{db_8cpp}\index{db.cpp@{db.cpp}}
+{\ttfamily \#include \char`\"{}db.\+h\char`\"{}}\newline
+Include dependency graph for db.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+P\+Gconn $\ast$ \textbf{ conectar\+Db} (char $\ast$servidor, int puerto, char $\ast$nombredb, char $\ast$usuario, char $\ast$contrasena)
+\item 
+void \textbf{ desconectar\+Db} (P\+Gconn $\ast$conexion)
+\item 
+P\+Gresult $\ast$ \textbf{ consultar\+Db} (P\+Gconn $\ast$conexion, char $\ast$sql)
+\item 
+long \textbf{ filas\+Afectadas\+Db} (P\+Gresult $\ast$resultado)
+\item 
+char $\ast$ \textbf{ resultado\+Db} (P\+Gresult $\ast$resultado, int fila, int columna)
+\item 
+void \textbf{ liberar\+Resultado\+Db} (P\+Gresult $\ast$resultado)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{db_8cpp_a5cb282f5ae1ffb4610adbff99c51281a}} 
+\index{db.cpp@{db.cpp}!conectarDb@{conectarDb}}
+\index{conectarDb@{conectarDb}!db.cpp@{db.cpp}}
+\doxysubsubsection{conectarDb()}
+{\footnotesize\ttfamily P\+Gconn$\ast$ conectar\+Db (\begin{DoxyParamCaption}\item[{char $\ast$}]{servidor,  }\item[{int}]{puerto,  }\item[{char $\ast$}]{nombredb,  }\item[{char $\ast$}]{usuario,  }\item[{char $\ast$}]{contrasena }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em servidor} & \\
+\hline
+{\em puerto} & \\
+\hline
+{\em nombredb} & \\
+\hline
+{\em usuario} & \\
+\hline
+{\em contrasena} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 3 of file db.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{db_8cpp_a5cb282f5ae1ffb4610adbff99c51281a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{db_8cpp_a211d6edb0fb9325fa41929128f94bdda}} 
+\index{db.cpp@{db.cpp}!consultarDb@{consultarDb}}
+\index{consultarDb@{consultarDb}!db.cpp@{db.cpp}}
+\doxysubsubsection{consultarDb()}
+{\footnotesize\ttfamily P\+Gresult$\ast$ consultar\+Db (\begin{DoxyParamCaption}\item[{P\+Gconn $\ast$}]{conexion,  }\item[{char $\ast$}]{sql }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em conexion} & \\
+\hline
+{\em sql} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 24 of file db.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{db_8cpp_a211d6edb0fb9325fa41929128f94bdda_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{db_8cpp_adc45fcca9ff2f11a0056e6687244b48f}} 
+\index{db.cpp@{db.cpp}!desconectarDb@{desconectarDb}}
+\index{desconectarDb@{desconectarDb}!db.cpp@{db.cpp}}
+\doxysubsubsection{desconectarDb()}
+{\footnotesize\ttfamily void desconectar\+Db (\begin{DoxyParamCaption}\item[{P\+Gconn $\ast$}]{conexion }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em conexion} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file db.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{db_8cpp_adc45fcca9ff2f11a0056e6687244b48f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{db_8cpp_a21664f429c882fb938fad76090ff725b}} 
+\index{db.cpp@{db.cpp}!filasAfectadasDb@{filasAfectadasDb}}
+\index{filasAfectadasDb@{filasAfectadasDb}!db.cpp@{db.cpp}}
+\doxysubsubsection{filasAfectadasDb()}
+{\footnotesize\ttfamily long filas\+Afectadas\+Db (\begin{DoxyParamCaption}\item[{P\+Gresult $\ast$}]{resultado }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em resultado} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 34 of file db.\+cpp.
+
+\mbox{\label{db_8cpp_ae96d2c69f21179895309b9bc6cd403dd}} 
+\index{db.cpp@{db.cpp}!liberarResultadoDb@{liberarResultadoDb}}
+\index{liberarResultadoDb@{liberarResultadoDb}!db.cpp@{db.cpp}}
+\doxysubsubsection{liberarResultadoDb()}
+{\footnotesize\ttfamily void liberar\+Resultado\+Db (\begin{DoxyParamCaption}\item[{P\+Gresult $\ast$}]{resultado }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em resultado} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file db.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{db_8cpp_ae96d2c69f21179895309b9bc6cd403dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{db_8cpp_a9cb7f0d06fc3107502164c83000d0d21}} 
+\index{db.cpp@{db.cpp}!resultadoDb@{resultadoDb}}
+\index{resultadoDb@{resultadoDb}!db.cpp@{db.cpp}}
+\doxysubsubsection{resultadoDb()}
+{\footnotesize\ttfamily char$\ast$ resultado\+Db (\begin{DoxyParamCaption}\item[{P\+Gresult $\ast$}]{resultado,  }\item[{int}]{fila,  }\item[{int}]{columna }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em resultado} & \\
+\hline
+{\em fila} & \\
+\hline
+{\em columna} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 45 of file db.\+cpp.
+
