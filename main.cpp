@@ -15,18 +15,15 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
+    std::vector<int> arreglo;
 
-    for (int largo = 1; largo < (INT_MAX / 2); largo *= 100) {
-        int i = 0;
+    for (int largo = 1; largo < (INT_MAX / 2); largo *= 1000) {
         auto inicio = chrono::steady_clock::now();
-        std::vector<int> arreglo = generarVector(largo);
+        arreglo = generarVector(100000);
         //quicksort
-        quickSort(arreglo, 0, largo);
         auto termino = chrono::steady_clock::now();
         auto duracion = chrono::duration_cast<chrono::nanoseconds>(termino - inicio).count();
-        std::cout << std::endl << "Generacion de " << largo << "  demoró (" << duracion << " ns) " << arreglo.at(i) << std::endl;
-        i++;
-        cout << i << endl;
+        std::cout << std::endl << "Generacion de " << largo << "  demoró (" << duracion << " ns) " << std::endl;
         std::string sql;
         sql = "INSERT INTO ejecuciones (usuario_fk, algoritmo_fk, cantidad, duracion) VALUES ('1','1','" + std::to_string(largo) + "','" + std::to_string(duracion) + "')";
         // std::string algoritmo;
@@ -34,19 +31,19 @@ int main(int argc, char** argv) {
         PGconn* conexion = conectarDb((char *) "sebastian.cl", 5432, (char *) "aadb", (char *) "bravo", (char *) "grupo02");
         PGresult* resultado = consultarDb(conexion, (char *) sql.c_str());
         liberarResultadoDb(resultado);
-
         desconectarDb(conexion);
-
     }
 
-    
-    
+    quickSort(arreglo, 0, arreglo.size());
+    imprimirVector(arreglo);
 
-
-    /**
+     /**
      * Despliegue de participantes
      */
     participantes();
+
+
+   
     return EXIT_SUCCESS;
 }
 
